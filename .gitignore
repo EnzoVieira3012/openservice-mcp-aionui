@@ -1,0 +1,8 @@
+# Chrome Extension projects
+node_modules/
+.vscode/
+*.local
+*.log
+
+# AionRS
+.aionrs/

@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "OpenService MCP AionUI",
+  "version": "1.0.0",
+  "description": "Controle OpenService MCP via AionUI - navegação, extração, cliques e automação completa do Chrome",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "storage",
+    "http://*/*",
+    "https://*/*",
+    "debugger"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
